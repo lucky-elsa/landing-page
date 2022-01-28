@@ -1,0 +1,53 @@
+@use "../variables" as v;
+
+.s-footer {
+    background-color: v.$color-black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 0;
+
+    &__logo {
+        width: 13rem;
+    }
+
+    &__list {
+        margin: 2rem 0;
+        text-align: center;
+        list-style: none;
+    }
+
+    &__item {
+        margin: 1.5rem 0;
+    }
+
+    &__link {
+        font-size: 1.2rem;
+        color: v.$color-white;
+        font-family: v.$font-header;
+        text-decoration: none;
+
+        &:hover,
+        &:active,
+        &:focus {
+            text-decoration: underline;
+        }
+    }
+
+    &__socials {
+        display: flex;
+        gap: 1.5rem;
+        list-style: none;
+    }
+
+    &__icon {
+        width: 2rem;
+    }
+
+    &__copyrights {
+        font-size: 1.2rem;
+        color: v.$color-light-gray;
+        font-family: v.$font-paragraph;
+        margin-top: 2rem;
+    }
+}
