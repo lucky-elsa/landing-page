@@ -1,0 +1,12 @@
+*.sketch
+*.fig
+*.xd
+.DS_Store
+.prettierignore
+.style-guide.md
+
+design/
+.content.txt
+
+node_modules/
+dist/
