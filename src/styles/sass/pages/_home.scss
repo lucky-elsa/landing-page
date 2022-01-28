@@ -1,0 +1,24 @@
+.s-about {
+    margin: 7rem 0;
+    padding: 0 2rem;
+
+    &__img {
+        width: 100%;
+        height: auto;
+    }
+
+    &__content-wrapper {
+        margin-top: 2rem;
+        text-align: center;
+    }
+
+    &__heading {
+        margin: 5rem 0 2rem 0;
+        font-size: 3.2rem;
+    }
+
+    &__content {
+        font-size: 1.6rem;
+        margin: 0 1.5rem;
+    }
+}

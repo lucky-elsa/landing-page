@@ -4,8 +4,14 @@
 @use "variables" as v;
 
 .heading--primary {
-    color: v.$color-white;
     text-transform: uppercase;
     font-family: v.$font-header;
     font-weight: 300;
+}
+
+.paragraph {
+    font-family: v.$font-paragraph;
+    font-weight: 300;
+    color: v.$color-light-gray;
+    line-height: 2.5rem;
 }
