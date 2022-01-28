@@ -5,10 +5,38 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-        <title>Title</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@300&display=swap"
+            rel="stylesheet"
+        />
+
+        <title>Loopstudios landing page</title>
     </head>
     <body>
-        <h1>Hello my new project</h1>
-        <img src="./assets/monster.png" />
+        <div class="website-wrapper">
+            <header class="s-header">
+                <nav>
+                    <img src="./assets/logo.svg" class="s.header__logo" />
+
+                    <svg
+                        width="24"
+                        height="16"
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="s.header__nav-burger"
+                    >
+                        <g fill="#FFF" fill-rule="evenodd">
+                            <path d="M0 0h24v2H0zM0 7h24v2H0zM0 14h24v2H0z" />
+                        </g>
+                    </svg>
+                </nav>
+                <div class="s.header_heading">
+                    <h1 class="s.header_heading-primary heading-primary">
+                        Immersive experiences that deliver
+                    </h1>
+                </div>
+            </header>
+        </div>
     </body>
 </html>

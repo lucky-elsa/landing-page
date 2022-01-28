@@ -13,6 +13,7 @@ html {
 }
 
 body {
-    font-size: 1.5rem;
-    background-color: v.$color-light-greyish-cyan-1;
+    background-image: url("../../assets/mobile/image-hero.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
