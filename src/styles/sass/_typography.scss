@@ -1,2 +1,11 @@
 // headings
 // parapgraphs
+
+@use "variables" as v;
+
+.heading--primary {
+    color: v.$color-white;
+    text-transform: uppercase;
+    font-family: v.$font-header;
+    font-weight: 300;
+}
