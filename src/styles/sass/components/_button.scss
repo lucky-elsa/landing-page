@@ -1,0 +1,20 @@
+@use "../variables" as v;
+
+.button {
+    &--main {
+        text-transform: uppercase;
+        color: v.$color-black;
+        background-color: v.$color-white;
+        font-family: v.$font-paragraph;
+        border: 1px solid v.$color-black;
+        padding: 1rem 4rem;
+        letter-spacing: 0.5rem;
+        transition: 0.25s;
+        cursor: pointer;
+
+        &:hover,
+        &:focus {
+            box-shadow: inset 0 0 0 2em v.$color-light-gray;
+        }
+    }
+}
