@@ -2,13 +2,16 @@
 
 .s-footer {
     background-color: v.$color-black;
+    color: v.$color-white;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 4rem 0;
+    margin-top: 7rem;
 
     &__logo {
-        width: 13rem;
+        margin: 1rem 0;
+        width: 15rem;
     }
 
     &__list {
@@ -18,11 +21,11 @@
     }
 
     &__item {
-        margin: 1.5rem 0;
+        margin: 2rem 0;
     }
 
     &__link {
-        font-size: 1.2rem;
+        font-size: 1.8rem;
         color: v.$color-white;
         font-family: v.$font-header;
         text-decoration: none;
@@ -41,7 +44,7 @@
     }
 
     &__icon {
-        width: 2rem;
+        width: 2.5rem;
     }
 
     &__copyrights {
@@ -50,4 +53,15 @@
         font-family: v.$font-paragraph;
         margin-top: 2rem;
     }
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: v.$color-light-gray;
+    margin-top: 1rem;
+}
+.attribution a {
+    color: hsl(228, 78%, 73%);
+    text-decoration: none;
 }
