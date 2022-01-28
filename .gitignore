@@ -3,10 +3,10 @@
 *.xd
 .DS_Store
 .prettierignore
-.style-guide.md
+style-guide.md
 
 design/
-.content.txt
+content.txt
 
 node_modules/
 dist/
