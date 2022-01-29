@@ -20,11 +20,22 @@
         }
     }
 
+    &__burger {
+        @include m.respond(tab-port) {
+            display: none;
+        }
+    }
+
     &__nav {
         display: flex;
         justify-content: space-between;
         padding: 2rem 1rem;
         position: relative;
+
+        @include m.respond(tab-port) {
+            align-items: center;
+            gap: 8rem;
+        }
     }
 
     &__heading {

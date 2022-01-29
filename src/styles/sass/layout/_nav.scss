@@ -1,4 +1,5 @@
 @use "../variables" as v;
+@use "../mixins" as m;
 
 .menu {
     position: absolute;
@@ -13,17 +14,40 @@
     gap: 7rem;
     transition: all 0.25s;
 
+    @include m.respond(tab-port) {
+        position: relative;
+        display: block;
+        width: auto;
+        top: 0;
+        left: 0;
+        height: auto;
+        background-color: transparent;
+        padding: 0;
+    }
+
     &__img-wrapper {
         display: flex;
         justify-content: space-between;
+
+        @include m.respond(tab-port) {
+            display: none;
+        }
     }
 
     &__list {
         list-style: none;
+
+        @include m.respond(tab-port) {
+            display: flex;
+        }
     }
 
     &__item {
         margin: 3rem 0;
+
+        @include m.respond(tab-port) {
+            margin: 0 1rem;
+        }
     }
 
     &__link {
@@ -38,6 +62,10 @@
         &:hover span::before,
         &:focus span::before {
             clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
+
+        @include m.respond(tab-port) {
+            text-transform: none;
         }
     }
 
@@ -66,4 +94,8 @@
 
 .hidden {
     left: 110%;
+
+    @include m.respond(tab-port) {
+        left: 0%;
+    }
 }
