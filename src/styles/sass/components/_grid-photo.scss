@@ -1,4 +1,5 @@
 @use "../variables" as v;
+@use "../mixins" as m;
 
 .grid {
     &__item {
@@ -16,5 +17,9 @@
         text-transform: uppercase;
         font-family: v.$font-header;
         font-size: 2.5rem;
+
+        @include m.respond(tab-port) {
+            font-size: 3.5rem;
+        }
     }
 }

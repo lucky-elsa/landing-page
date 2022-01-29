@@ -2,12 +2,17 @@
 // parapgraphs
 
 @use "variables" as v;
+@use "mixins" as m;
 
 .heading--primary {
     text-transform: uppercase;
     font-family: v.$font-header;
     font-weight: 300;
     font-size: 3.2rem;
+
+    @include m.respond(tab-port) {
+        font-size: 5.5rem;
+    }
 }
 
 .paragraph {
@@ -15,4 +20,9 @@
     font-weight: 300;
     color: v.$color-light-gray;
     line-height: 2.5rem;
+
+    @include m.respond(tab-port) {
+        font-size: 3rem;
+        line-height: 4rem;
+    }
 }

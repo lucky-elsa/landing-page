@@ -1,4 +1,5 @@
 @use "../variables" as v;
+@use "../mixins" as m;
 
 .s-footer {
     background-color: v.$color-black;
@@ -12,6 +13,10 @@
     &__logo {
         margin: 1rem 0;
         width: 15rem;
+
+        @include m.respond(tab-port) {
+            width: 20rem;
+        }
     }
 
     &__list {
@@ -35,6 +40,10 @@
         &:focus {
             text-decoration: underline;
         }
+
+        @include m.respond(tab-port) {
+            font-size: 3rem;
+        }
     }
 
     &__socials {
@@ -45,6 +54,10 @@
 
     &__icon {
         width: 2.5rem;
+
+        @include m.respond(tab-port) {
+            width: 3rem;
+        }
     }
 
     &__copyrights {
@@ -52,11 +65,15 @@
         color: v.$color-light-gray;
         font-family: v.$font-paragraph;
         margin-top: 2rem;
+
+        @include m.respond(tab-port) {
+            font-size: 2rem;
+        }
     }
 }
 
 .attribution {
-    font-size: 11px;
+    font-size: 1.2rem;
     text-align: center;
     color: v.$color-light-gray;
     margin-top: 1rem;
@@ -69,5 +86,9 @@
     &:active,
     &:focus {
         text-decoration: underline;
+    }
+
+    @include m.respond(tab-port) {
+        font-size: 2rem;
     }
 }

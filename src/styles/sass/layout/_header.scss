@@ -1,4 +1,5 @@
 @use "../variables" as v;
+@use "../mixins" as m;
 
 .s-header {
     background-image: url("../../../assets/mobile/image-hero.jpg");
@@ -13,6 +14,10 @@
 
     &__logo {
         height: 2.5rem;
+
+        @include m.respond(tab-port) {
+            height: 4rem;
+        }
     }
 
     &__nav {
@@ -28,5 +33,10 @@
         margin: 0 1rem;
         padding: 2rem;
         border: 1px solid v.$color-white;
+
+        @include m.respond(tab-port) {
+            font-size: 8rem;
+            margin-left: 7rem;
+        }
     }
 }

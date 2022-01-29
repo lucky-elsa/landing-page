@@ -1,4 +1,5 @@
 @use "../variables" as v;
+@use "../mixins" as m;
 
 .button {
     &--main {
@@ -15,6 +16,10 @@
         &:hover,
         &:focus {
             box-shadow: inset 0 0 0 2em v.$color-light-gray;
+        }
+
+        @include m.respond(tab-port) {
+            font-size: 3rem;
         }
     }
 }

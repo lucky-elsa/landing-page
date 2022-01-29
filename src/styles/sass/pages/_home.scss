@@ -1,3 +1,5 @@
+@use "../mixins" as m;
+
 .s-about {
     margin-top: 21rem;
     padding: 0 2rem;
@@ -43,5 +45,9 @@
 
     &__button {
         margin: 3rem 0;
+
+        @include m.respond(tab-port) {
+            margin: 8rem;
+        }
     }
 }
