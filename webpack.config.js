@@ -36,7 +36,7 @@ module.exports = {
                 test: /\.s[ac]ss$/i,
                 use: [
                     "style-loader",
-                    "css-loader?url=false",
+                    "css-loader",
                     {
                         loader: "resolve-url-loader",
                         options: { sourceMap: true },

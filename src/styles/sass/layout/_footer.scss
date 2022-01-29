@@ -64,4 +64,10 @@
 .attribution a {
     color: hsl(228, 78%, 73%);
     text-decoration: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+        text-decoration: underline;
+    }
 }

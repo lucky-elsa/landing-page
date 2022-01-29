@@ -1,0 +1,64 @@
+@use "../variables" as v;
+
+.menu {
+    position: absolute;
+    background-color: v.$color-black;
+    padding: 3rem;
+    width: 100vw;
+    height: 100vh;
+    top: -15px;
+    left: -15px;
+    display: flex;
+    flex-direction: column;
+    gap: 7rem;
+
+    &__img-wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__list {
+        list-style: none;
+    }
+
+    &__item {
+        margin: 3rem 0;
+    }
+
+    &__link {
+        text-transform: uppercase;
+        color: v.$color-white;
+        font-size: 2rem;
+        font-family: v.$font-header;
+        text-decoration: none;
+
+        position: relative;
+        transition: clip-path 275ms ease;
+        &:hover span::before,
+        &:focus span::before {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        }
+    }
+
+    &__span {
+        position: relative;
+        display: inline-block;
+        color: v.$color-white;
+        &::before {
+            position: absolute;
+            content: attr(data-content);
+            color: v.$color-links;
+            text-decoration: underline;
+            text-decoration-color: v.$color-links;
+            clip-path: polygon(0 0, 0 0, 0% 100%, 0 100%);
+            transition: clip-path 275ms ease;
+        }
+    }
+
+    &__close-burger {
+        width: 2rem;
+        height: 2rem;
+        align-self: end;
+        cursor: pointer;
+    }
+}
