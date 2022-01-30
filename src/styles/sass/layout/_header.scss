@@ -12,6 +12,10 @@
     gap: 15rem;
     height: 100vh;
 
+    @include m.respond(tab-port) {
+        background-image: url("../../../assets/desktop/image-hero.jpg");
+    }
+
     &__logo {
         height: 2.5rem;
 
