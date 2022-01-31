@@ -17,6 +17,10 @@
     &__heading {
         margin: 5rem 0 2rem 0;
         font-size: 3.2rem;
+
+        @include m.respond(tab-port) {
+            font-size: 5.5rem;
+        }
     }
 
     &__content {
@@ -35,6 +39,11 @@
     &__heading {
         text-align: center;
         margin: 5rem 0;
+        font-size: 3.2rem;
+
+        @include m.respond(tab-port) {
+            font-size: 5.5rem;
+        }
     }
 
     &__grid {

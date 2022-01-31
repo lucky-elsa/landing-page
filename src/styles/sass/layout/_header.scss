@@ -16,6 +16,10 @@
         background-image: url("../../../assets/desktop/image-hero.jpg");
     }
 
+    @include m.respond(tab-land) {
+        padding: 3rem 7rem;
+    }
+
     &__logo {
         height: 2.5rem;
 
@@ -40,6 +44,10 @@
             align-items: center;
             gap: 8rem;
         }
+
+        @include m.respond(tab-land) {
+            gap: 10rem;
+        }
     }
 
     &__heading {
@@ -48,10 +56,18 @@
         margin: 0 1rem;
         padding: 2rem;
         border: 1px solid v.$color-white;
+        max-width: 500px;
 
         @include m.respond(tab-port) {
             font-size: 8rem;
             margin-left: 7rem;
+            max-width: 650px;
+        }
+
+        @include m.respond(tab-land) {
+            padding: 4rem;
+            font-size: 8rem;
+            max-width: 800px;
         }
     }
 }

@@ -8,11 +8,7 @@
     text-transform: uppercase;
     font-family: v.$font-header;
     font-weight: 300;
-    font-size: 3.2rem;
-
-    @include m.respond(tab-port) {
-        font-size: 5.5rem;
-    }
+    
 }
 
 .paragraph {
