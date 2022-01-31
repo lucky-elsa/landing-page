@@ -54,7 +54,7 @@
         text-transform: uppercase;
         color: v.$color-white;
         font-size: 2rem;
-        font-family: v.$font-header;
+        font-family: v.$font-paragraph;
         text-decoration: none;
 
         position: relative;
@@ -66,6 +66,10 @@
 
         @include m.respond(tab-port) {
             text-transform: none;
+        }
+
+        @include m.respond(tab-land) {
+            font-size: 1.4rem;
         }
     }
 

@@ -1,8 +1,20 @@
 @use "../mixins" as m;
+@use "../variables" as v;
 
 .s-about {
     margin-top: 21rem;
     padding: 0 2rem;
+
+    @include m.respond(tab-land) {
+        display: flex;
+        position: relative;
+        margin: 30rem 0rem 15rem 10rem;
+        max-width: 1310px;
+    }
+
+    @include m.respond(desktop) {
+        margin-left: 20rem;
+    }
 
     &__img {
         width: 100%;
@@ -12,6 +24,16 @@
     &__content-wrapper {
         margin-top: 2rem;
         text-align: center;
+
+        @include m.respond(tab-land) {
+            position: absolute;
+            background-color: v.$color-white;
+            max-width: 600px;
+            min-height: 350px;
+            bottom: -30px;
+            right: 110px;
+            padding: 3rem 2.5rem;
+        }
     }
 
     &__heading {
@@ -21,11 +43,27 @@
         @include m.respond(tab-port) {
             font-size: 5.5rem;
         }
+
+        @include m.respond(tab-land) {
+            font-size: 3.5rem;
+        }
     }
 
     &__content {
         font-size: 1.6rem;
         margin: 0 1.5rem;
+        line-height: 2rem;
+
+        @include m.respond(tab-port) {
+            font-size: 3rem;
+            line-height: 4rem;
+        }
+
+        @include m.respond(tab-land) {
+            font-size: 1.5rem;
+            line-height: 2rem;
+            text-align: justify;
+        }
     }
 }
 

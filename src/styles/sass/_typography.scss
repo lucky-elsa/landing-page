@@ -8,17 +8,10 @@
     text-transform: uppercase;
     font-family: v.$font-header;
     font-weight: 300;
-    
 }
 
 .paragraph {
     font-family: v.$font-paragraph;
     font-weight: 300;
     color: v.$color-light-gray;
-    line-height: 2.5rem;
-
-    @include m.respond(tab-port) {
-        font-size: 3rem;
-        line-height: 4rem;
-    }
 }
