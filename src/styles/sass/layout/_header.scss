@@ -14,6 +14,7 @@
 
     @include m.respond(tab-port) {
         background-image: url("../../../assets/desktop/image-hero.jpg");
+        background-position: center;
     }
 
     @include m.respond(tab-land) {
