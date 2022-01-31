@@ -9,6 +9,7 @@
         display: flex;
         position: relative;
         margin: 30rem 0rem 15rem 10rem;
+        min-width: 1120px;
         max-width: 1310px;
     }
 
@@ -106,7 +107,6 @@
 
         @include m.respond(tab-port) {
             grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: repeat(6, 1fr);
             padding: 0rem 11rem;
             gap: 3.5rem;
         }
@@ -115,8 +115,6 @@
             grid-area: images;
             grid-template-columns: repeat(4, 1fr);
             grid-template-rows: repeat(2, 1fr);
-            padding: 0rem 11rem;
-            gap: 3.5rem;
         }
     }
 

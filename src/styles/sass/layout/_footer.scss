@@ -10,6 +10,23 @@
     padding: 4rem 0;
     margin-top: 7rem;
 
+    @include m.respond(tab-land) {
+        flex-direction: row;
+        padding: 6rem 8rem;
+        justify-content: space-between;
+    }
+
+    &__side-wrapper-1 {
+        @include m.respond(tab-port) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        @include m.respond(tab-land) {
+            align-items: flex-start;
+        }
+    }
+
     &__logo {
         margin: 1rem 0;
         width: 15rem;
@@ -23,10 +40,19 @@
         margin: 2rem 0;
         text-align: center;
         list-style: none;
+
+        @include m.respond(tab-port) {
+            display: flex;
+            text-align: left;
+        }
     }
 
     &__item {
         margin: 2rem 0;
+
+        @include m.respond(tab-port) {
+            margin: 0 1rem;
+        }
     }
 
     &__link {
@@ -44,12 +70,25 @@
         @include m.respond(tab-port) {
             font-size: 3rem;
         }
+
+        @include m.respond(tab-land) {
+            font-size: 1.5rem;
+        }
+    }
+
+    &__side-wrapper-2 {
+        @include m.respond(tab-land) {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
     }
 
     &__socials {
         display: flex;
         gap: 1.5rem;
         list-style: none;
+        justify-content: center;
     }
 
     &__icon {
@@ -76,7 +115,8 @@
     font-size: 1.2rem;
     text-align: center;
     color: v.$color-light-gray;
-    margin-top: 1rem;
+    background-color: v.$color-black;
+    padding: 1rem;
 }
 .attribution a {
     color: hsl(228, 78%, 73%);
