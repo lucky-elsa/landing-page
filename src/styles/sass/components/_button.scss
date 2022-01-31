@@ -21,5 +21,11 @@
         @include m.respond(tab-port) {
             font-size: 3rem;
         }
+
+        @include m.respond(tab-land) {
+            font-size: 1.2rem;
+            padding: 1rem;
+            width: 15rem;
+        }
     }
 }

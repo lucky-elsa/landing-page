@@ -74,6 +74,15 @@
     flex-direction: column;
     align-items: center;
 
+    @include m.respond(tab-land) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 10% 90%;
+        grid-template-areas:
+            "title button"
+            "images images";
+    }
+
     &__heading {
         text-align: center;
         margin: 5rem 0;
@@ -82,12 +91,33 @@
         @include m.respond(tab-port) {
             font-size: 5.5rem;
         }
+
+        @include m.respond(tab-land) {
+            grid-area: title;
+            font-size: 4rem;
+            align-self: center;
+        }
     }
 
     &__grid {
         margin: 0 2rem;
         display: grid;
         gap: 2rem;
+
+        @include m.respond(tab-port) {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(6, 1fr);
+            padding: 0rem 11rem;
+            gap: 3.5rem;
+        }
+
+        @include m.respond(tab-land) {
+            grid-area: images;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            padding: 0rem 11rem;
+            gap: 3.5rem;
+        }
     }
 
     &__button {
@@ -95,6 +125,12 @@
 
         @include m.respond(tab-port) {
             margin: 8rem;
+        }
+
+        @include m.respond(tab-land) {
+            grid-area: button;
+            margin-left: 25rem;
+            justify-self: center;
         }
     }
 }

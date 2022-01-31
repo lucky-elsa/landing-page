@@ -4,9 +4,13 @@
 .grid {
     &__item {
         position: relative;
+        box-shadow: inset 0px 0px 250px rgba(0, 0, 0, 0.4);
+        line-height: 0;
     }
     &__img {
         width: 100%;
+        z-index: -100;
+        position: relative;
     }
 
     &__label {
@@ -17,9 +21,14 @@
         text-transform: uppercase;
         font-family: v.$font-header;
         font-size: 2.5rem;
+        line-height: 3rem;
 
         @include m.respond(tab-port) {
             font-size: 3.5rem;
+        }
+
+        @include m.respond(tab-land) {
+            font-size: 2.5rem;
         }
     }
 }
