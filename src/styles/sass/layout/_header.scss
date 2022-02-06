@@ -35,6 +35,11 @@
         }
     }
 
+    &__mobile-menu {
+        background-color: transparent;
+        border: none;
+    }
+
     &__burger {
         @include m.respond(tab-port) {
             display: none;
