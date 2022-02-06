@@ -23,6 +23,10 @@
         gap: 8rem;
     }
 
+    @include m.respond(desktop) {
+        height: 90vh;
+    }
+
     &__logo {
         height: 2.5rem;
 
