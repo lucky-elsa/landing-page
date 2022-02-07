@@ -39,12 +39,9 @@
         }
     }
 
-    &__mobile-menu {
-        background-color: transparent;
-        border: none;
-    }
-
     &__burger {
+        margin-right: 2rem;
+        cursor: pointer;
         @include m.respond(tab-port) {
             display: none;
         }
